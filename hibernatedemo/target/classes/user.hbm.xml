@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.jsp.hibernatedemo.User" table="user">
+		<id name="id" column="id">
+			<generator class="identity"/>
+		</id>
+		<property name="name" column="name" not-null="true" />
+		<property name="phone" column="phone" unique="true"
+			not-null="true" />
+		<property name="email" column="email" unique="true"
+			not-null="true" />
+		<property name="password" column="password" not-null="true"/>
+		
+	</class>
+</hibernate-mapping>
